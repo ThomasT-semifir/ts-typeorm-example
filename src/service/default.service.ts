@@ -12,4 +12,8 @@ export class DefaultService {
         if(item > 10 ) return 'error'
         this.repo.addItem(item)
     }
+
+    removeItem = (index: number) => {
+        this.repo.removeitem(index)
+    }
 }

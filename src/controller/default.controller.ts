@@ -15,4 +15,10 @@ export class DefaultController {
         if(resp == 'error') res.send(resp)
         res.sendStatus(201);
     }
+
+    removeItem = (req: Request, res: Response) => {
+        let value = req.params.index
+        this.service.removeItem(Number(value))
+        res.sendStatus(204)
+    }
 }

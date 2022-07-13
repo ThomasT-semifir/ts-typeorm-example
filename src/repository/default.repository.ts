@@ -9,4 +9,8 @@ export class DefaultRepository {
     addItem = (item: number) => {
         this.tableau.push(item)
     }
+
+    removeitem = (index: number) => {
+        this.tableau.splice(index, 1)
+    }
 }
