@@ -5,9 +5,11 @@ const controller = new ChansonController()
 const router = express.Router()
 
 router.get('', controller.getAllChansons)
+router.post('', controller.addChanson)
+router.get("/search", controller.getChansonByTitle)
 router.get('/:id', controller.getChanson)
-router.get('/album/:id', controller.getChansonsByAlbumId)
-router.post('/create', controller.addChanson)
-router.delete('/delete/:id', controller.deleteChanson)
+router.patch('/:id', controller.updateChanson)
+router.put("/:id", controller.replaceChanson)
+router.delete('/:id', controller.deleteChanson)
 
 export default router
